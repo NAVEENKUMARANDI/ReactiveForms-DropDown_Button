@@ -1,0 +1,15 @@
+<!-- Form starts -->
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+        <option value="" disabled>Choose your city</option>
+        <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+     </select>
+ 
+     <br><br>
+    <button type="submit">Submit</button>
+ </form><!-- Form ends -->
+
+<app-root></app-root>
+
+<router-outlet></router-outlet>
